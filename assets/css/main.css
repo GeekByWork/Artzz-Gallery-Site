@@ -271,7 +271,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/header_bg.jpg) no-repeat center top;
+	background: url(../img/header.jpg) no-repeat center top;
 	margin-top: -50px;
 	padding-top:120px;
 	text-align:center;
@@ -412,7 +412,7 @@ a:after {
 /* Section Dividers Backgrounds */
 
 .divider1 {
-	background-image: url('../img/bg/divider1.jpg')
+	background-image: url('../img/bg/art7.jpg')
 }
 
 .divider2 {
@@ -635,3 +635,17 @@ a:after {
 	}
 }
 
+.navbar-nav > li >a
+{
+    color: black !important;
+}
+
+.art1
+{
+    background: url("../img/art1.jpg")
+}
+
+.art2
+{
+    background: url("../img/art1.jpg")
+}
