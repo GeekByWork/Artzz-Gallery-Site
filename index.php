@@ -12,5 +12,5 @@ $contact = explode(" ", $contacts);
 // $contact = fread($file, filesize("test.txt"));
 // fclose($file);
 
-include 'index.php';
+include 'template.php';
 ?>
