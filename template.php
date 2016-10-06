@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Artzz - Art at Best </title>    
+    <title> <?php echo $title; ?> </title>    
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles -->
@@ -47,7 +47,7 @@
 	    <div id="headerwrap" id="home" name="home">
 			<header class="clearfix">
 	  		 		<h1><span class="icon icon-pencil"></span></h1>
-	  		 		<p>Artworks you have never seen before.</p>
+	  		 		<p><?php echo $content; ?></p>
 	  		 		<p>Exquisite work by exclusive artists.</p>
 	  		</header>	    
 	    </div>
@@ -202,6 +202,9 @@
 				<br>
 				<div class="col-lg-4">
 					<h3>Contact Information</h3>
+					<?php
+					echo: "Hello"
+					?>
 					<p><span class="icon icon-home"></span> SAN JOSE, CA<br/>
 						<span class="icon icon-phone"></span> +1 498 844 1893 <br/>
 						<span class="icon icon-mobile"></span> +1 459 559 1853 <br/>
