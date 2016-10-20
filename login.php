@@ -1,35 +1,37 @@
 <?php
 
-$id=$password="";
+$id=$password=$idErr=$pErr="";
 if ($_SERVER["REQUEST_METHOD"]=="POST")
 {
   if (empty($_POST["id"])) 
 	{
-	$idErr = "Login ID Required";
+	    $idErr = "Login ID Required";
 	}
   else
 	{
-	$id=validate($_POST["id"]);
+	$id=extraction($_POST["id"]);
 	}
   if (empty($_POST["password"])) 
 	{
-    	$passErr = "Password Required";
+    	$pErr = "Password Required";
 	}
   else
 	{
-	$pass=validate($_POST["password"]);
+	    $pass = extraction($_POST["password"]);
 	}
 }
 
-function validate($data)
+validate($id,$pass, $pErr, $idErr);
+
+function extraction($data)
   {
 	$data=trim($data);
 	$data=stripslashes($data);
 	$data=htmlspecialchars($data);
 	return $data;
   }
-logger($id,$pass);
-function logger($id,$pass)
+
+function validate($id,$pass, $pErr, $idErr)
 {
     $file=fopen("admin.txt","r") or die("Can't open file");
     $line=fgets($file);
@@ -37,12 +39,25 @@ function logger($id,$pass)
     $field=explode(",",$line,2);
 if($id==$field[0] && $pass==$field[1])
 	{
-	 $file2=fopen("users.txt","r");
-	 echo fread($file2,filesize("users.txt"));
+	$file2=fopen("users.txt","r");
+    echo "List of Users: <br /><br />";
+    while(! feof($file2))
+    {
+        echo fgets($file2). "<br />";
+    }
+    fclose($file);
 	}
 else 
 	{
-	 echo ("Invalid Username or Password");
+	if(strlen($idErr)>0)
+        echo $idErr;
+    else
+    {
+        if(strlen($pErr)>0)
+            echo $pErr;
+        else
+            echo ("Invalid Username or Password");
+    }
 	}
 }
 ?>
