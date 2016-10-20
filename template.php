@@ -38,6 +38,7 @@
 			<li> <a href="#services" class="smoothScroll"> Products/Services</a></li>						
 			<li> <a href="#blog" class="smoothScroll"> News/Blog</a></li>
 			<li> <a href="#contact" class="smoothScroll"> Contacts</a></li>
+			<li> <a href="./login.html"> Login</a></li>
         </div>
       </div>
     </div>
