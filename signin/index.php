@@ -1,6 +1,9 @@
 <?php
 $title = "Sign In";
 
+$link = "./allUsers.php";
+$linkText = "All Users";
+
 $content = "<header class='clearfix'>    <strong>ADMINISTRATOR LOGIN:</strong><br />    <br />    
 <form id='signin' action='./signinhandler.php' method='post'>User ID:<br />
         <input name='id' type='text' /><br />

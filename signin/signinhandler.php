@@ -37,12 +37,19 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
         } else {
             $password = extraction($_POST["pass"]);
         }
-
         $lName = extraction($_POST["lName"]);
         $fName = extraction($_POST["fName"]);
         $age = extraction($_POST["age"]);
         $gender = extraction($_POST["gender"]);
         dbInsert($userName, $password, $age, $gender, $fName, $lName);
+    }
+
+    if($_POST["sign"]=="allUsers")
+    {
+        $criteria = extraction($_POST["searchCriteria"]);
+        $search = extraction($_POST["searchText"]);
+        dbSearch($criteria, $search);
+
     }
 }
 
@@ -102,34 +109,7 @@ function dbValidate($id,$password, $pErr, $idErr)
     } else {
         echo "Error creating database: " . $conn->error;
     }
-
     $conn->close();
-
-    /*
-   //Select Database
-   mysql_select_db($dbname) or die(mysql_error());
-
-   //build query
-   $query = "SELECT COUNT(*) FROM users WHERE loginId = '$id'";
-
-   //Execute query
-   $qry_result = mysql_query($query) or die(mysql_error());
-
-   if($qry_result=0)
-   {
-
-   }
-   else
-   {
-
-   }
-   if(is_numeric($age))
-   $query .= " AND age <= $age";
-
-   if(is_numeric($wpm))
-   $query .= " AND wpm <= $wpm";
-   */
-
 }
 
 function dbInsert($userName, $password, $age, $gender, $fName, $lName){
@@ -141,32 +121,32 @@ function dbInsert($userName, $password, $age, $gender, $fName, $lName){
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
-    echo "hello";
-    echo $userName;
-    echo $fName;
-    echo $lName;
-    echo $age;
-    echo $password;
-    echo $gender;
-    echo "hello";
-    // Create database
-    /*$sql = "insert into users
-
-            (id, userName, firstName, lastName, age, gender, password)
-            values 
-            (" + "'" + $userName + "','" + $fName + "','" + $lName + "'," + $age + ",'" + $gender + "','" + $password + "'" + ");";
-    */
-
     $sql = "insert into users
             (username, firstname, lastname, age, gender, password)
             VALUES 
-            ('alpha', 'alpha', 'alpha', 25, 'M', 'alpha')";
+            ('" . $userName . "', '" . $fName . "', '" . $lName . "', " . $age . ",'" . $gender . "','" . $password."')";
     if ($conn->query($sql) === TRUE) {
-        echo "Successfully Done";
+        echo "User Successfully Added. Click Back Button.";
     } else {
         echo "Error : " . $conn->error;
     }
+    $conn->close();
+}
 
+function dbSearch($criteria, $search)
+{
+    //Connect to MySQL Server
+    $conn = mysqli_connect($GLOBALS['dbHost'], $GLOBALS['dbUser'], $GLOBALS['dbPass'], $GLOBALS['dbName']);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "select * from users where " . $criteria . " like '%" . $search ."%';";
+    if ($conn->query($sql) === TRUE) {
+
+    } else {
+        echo "Error : " . $conn->error;
+    }
     $conn->close();
 }

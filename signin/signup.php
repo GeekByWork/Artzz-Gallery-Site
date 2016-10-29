@@ -1,6 +1,7 @@
 <?php
 $title = "Sign In";
-
+$linkText = "Sign In";
+$link = "../signin";
 $content = "
 <header class='clearfix'>
     <strong>Create a New User:</strong>

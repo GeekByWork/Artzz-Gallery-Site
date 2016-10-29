@@ -33,7 +33,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="../">Home</a></li>
-                    <li><a href="./allUsers.php">All Users</a></li>
+                    <li><a href=<?php echo $link; ?>><?php echo $linkText; ?></a></li>
             </div>
         </div>
     </div>
