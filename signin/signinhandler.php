@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $criteria = extraction($_POST["searchCriteria"]);
         $search = extraction($_POST["searchText"]);
-        dbSearch($criteria, $search);
+        //dbSearch($criteria, $search);
 
     }
 }

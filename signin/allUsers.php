@@ -4,15 +4,20 @@ $link = "../signin/";
 $linkText = "Sign In";
 $searchResult = "";
 $searchHTML = "";
-
 $self = $_SERVER["PHP_SELF"];
-
-$content = "
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+$dbHost = "localhost";
+$dbUser = "root";
+$dbPass = "mysql";
+$dbName = "artzz";
+$dbPort = "3306";
+$content1 = "
 <header class='clearfix'>
     <strong>All Users:</strong>
     <br />
     <br />    
-    <form id='allUsers' action='<?php echo htmlspecialchars(". $self . ");?>' method='post'>
+    <form id='allUsers' action='' method='post'>
         <br />
         <div class='row'>
                 <div class='col-md-2'>
@@ -60,21 +65,18 @@ $content = "
                     Age
                 </div>
             </div>
-            <br />
-            " . $searchHTML . "
-        </div>
-        
-        <input type='hidden' name='sign' value='allUsers' />        
-    </form>
-</header>";
+            <br />";
 
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$content2 = "</div>        <input type='hidden' name='sign' value='allUsers' />    </form></header>";
+
+$content = $content1 . $searchHTML . $content2;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $criteria = test_input($_POST["searchCiteria"]);
+    $criteria = test_input($_POST["searchCriteria"]);
     $searchText = test_input($_POST["searchText"]);
-    dbSearch($criteria, $searchText);
+    $searchHTML = dbSearch($criteria, $searchText);
+    $content = $content1 . $searchHTML . $content2;
+
 }
 
 function test_input($data) {
@@ -86,6 +88,7 @@ function test_input($data) {
 
 function dbSearch($criteria, $search)
 {
+    $tempHTML = "";
     //Connect to MySQL Server
     $conn = mysqli_connect($GLOBALS['dbHost'], $GLOBALS['dbUser'], $GLOBALS['dbPass'], $GLOBALS['dbName']);
 
@@ -95,36 +98,40 @@ function dbSearch($criteria, $search)
     }
     $sql = "select username, firstname, lastname, gender, age from users where " . $criteria . " like '%" . $search ."%';";
 
-    if ($result = mysqli_fetch_row($conn, $sql))
-    {
-        $i=0;
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $i=1;
         // Fetch one and one row
-        while ($row=mysqli_fetch_row($result))
+        while ($row=$result->fetch_assoc())
         {
-            $GLOBALS['searchHTML'] = $GLOBALS['searchHTML'] . "
+            echo $row['username'];
+            $tempHTML = $tempHTML . "
             <div class='row' style='font-weight: bold'>
                 <div class='col-md-2'>"
                     . $i .
                 "</div>
                 <div class='col-md-2' style='text-align: left'>
-                    ". $row[0] . "
+                    ". $row['username'] . "
                 </div>
                 <div class='col-md-2'>
-                    ". $row[1] ."
+                    ". $row['firstname'] ."
                 </div>
                 <div class='col-md-2'>
-                    ". $row[2] ."
+                    ". $row['lastname'] ."
                 </div>
                 <div class='col-md-2'>
-                    ". $row[3] ."
+                    ". $row['gender'] ."
                 </div>
                 <div class='col-md-2'>
-                    " .$row[4]. "
+                    " .$row['age']. "
                 </div>
             </div>";
+            $i++;
         }
         // Free result set
         mysqli_free_result($result);
+        return $tempHTML;
     }
     $conn->close();
 }
