@@ -38,13 +38,11 @@
 			<li> <a href="#services" class="smoothScroll"> Products/Services</a></li>						
 			<li> <a href="#blog" class="smoothScroll"> News/Blog</a></li>
 			<li> <a href="#contact" class="smoothScroll"> Contacts</a></li>
-			<li> <a href="./login.html"> Login</a></li>
+			<li> <a href="./signin"> Sign In </a></li>
         </div>
       </div>
     </div>
-    </div>
-	  
-  		
+    </div>  		
 	    <div id="headerwrap" id="home" name="home">
 			<header class="clearfix">
 	  		 		<h1><span class="icon icon-pencil"></span></h1>

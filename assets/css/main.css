@@ -649,3 +649,9 @@ a:after {
 {
     background: url("../img/art1.jpg")
 }
+
+.error{
+    color: red;
+    font-size: 10px;
+    display: none;
+}

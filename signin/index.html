@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>    
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <title>Sign In</title>    
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/icomoon.css">
-    <link href="assets/css/animate-custom.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/icomoon.css">
+    <link href="../assets/css/animate-custom.css" rel="stylesheet">
 
     
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
     
-    <script src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/js/modernizr.custom.js"></script>
 
   </head>
 
@@ -32,8 +32,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">			
-            <li><a href="./">Home</a></li>
-			<li> <a href="./login.html"> Login</a></li>
+            <li><a href="../">Home</a></li>
+			<li> <a href=""> Sign In</a></li>
         </div>
       </div>
     </div>
@@ -43,13 +43,23 @@
         <div id="headerwrap" style="background:white" id="home" name="home">
 			<header class="clearfix">
                 <strong>ADMINISTRATOR LOGIN:</strong><br />
-                <form action="./login.php" method="post">Login ID:<br />
-                <input name="id" type="text" /><br />
-                <span class="error"></span><br />
+                <br />
+                <form action="./signin.php" method="post">User ID:<br />
+                <input name="id" type="text" /><br />                
+                <span class="error">
+                  Invalid UserID
+                </span>
+                <br />
                 Password:<br />
                 <input name="password" type="password" /><br />
-                <span class="error"></span><br />
-                <input type="submit" value="Submit" /></form>
+                <span class="error">
+                  Invalid Password
+                </span>
+                <br />
+                <br />
+                <button class="btn btn-danger" style="margin-right:10px"> Sign Up </button>
+                <button class="btn btn-success" type="submit" value="Submit" style="margin-left:10px;"> Sign In </button>
+                </form>
 	  		</header>	    
 	    </div>
 </body>

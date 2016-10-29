@@ -1,6 +1,12 @@
 <?php
 
 $id=$password=$idErr=$pErr="";
+
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "mysql";
+$dbname = "alpha";
+
 if ($_SERVER["REQUEST_METHOD"]=="POST")
 {
   if (empty($_POST["id"])) 
@@ -21,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
 	}
 }
 
-validate($id,$pass, $pErr, $idErr);
+dbvalidate($id,$pass, $pErr, $idErr);
 
 function extraction($data)
   {
@@ -31,7 +37,7 @@ function extraction($data)
 	return $data;
   }
 
-function validate($id,$pass, $pErr, $idErr)
+function filevalidate($id,$pass, $pErr, $idErr)
 {
     $file=fopen("admin.txt","r") or die("Can't open file");
     $line=fgets($file);
@@ -60,4 +66,41 @@ else
     }
 	}
 }
+
+function dbvalidate($id,$pass, $pErr, $idErr)
+{
+   //Connect to MySQL Server
+   $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+   if($conn){
+       echo "Connected";
+   } else{
+       echo "Sorry";
+   }
+   
+   //Select Database
+   mysql_select_db($dbname) or die(mysql_error());
+
+   //build query
+   $query = "SELECT COUNT(*) FROM users WHERE loginId = '$id'";
+   
+   //Execute query
+   $qry_result = mysql_query($query) or die(mysql_error());
+   
+   if($qry_result=0)
+   {
+                         
+   }
+   else
+   {
+       
+   }
+   if(is_numeric($age))
+   $query .= " AND age <= $age";
+   
+   if(is_numeric($wpm))
+   $query .= " AND wpm <= $wpm";
+   
+   
+}
+
 ?>
