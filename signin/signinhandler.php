@@ -20,38 +20,29 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
         if (empty($_POST["password"])) {
             $pErr = "Password Required";
         } else {
-            $pass = extraction($_POST["password"]);
+            $password = extraction($_POST["password"]);
         }
-
-        fileValidate($id,$pass, $pErr, $idErr);
+        fileValidate($id, $password, $pErr, $idErr);
     }
 
     if($_POST["sign"]=="up")
     {
-        if (empty($_POST["id"])) {
+        if (empty($_POST["userName"])) {
             $idErr = "User ID Required";
         } else {
-            $id = extraction($_POST["id"]);
+            $username = extraction($_POST["userName"]);
         }
-        if (empty($_POST["password"])) {
+        if (empty($_POST["pass"])) {
             $pErr = "Password Required";
         } else {
-            $pass = extraction($_POST["password"]);
-        }
-        if (!empty($_POST["lname"])) {
-            $age = extraction($_POST["lname"]);
-        }
-        if (!empty($_POST["fname"])) {
-            $age = extraction($_POST["fname"]);
-        }
-        if (!empty($_POST["age"])) {
-            $age = extraction($_POST["age"]);
-        }
-        if (!empty($_POST["gender"])) {
-            $gender = extraction($_POST["gender"]);
+            $password = extraction($_POST["pass"]);
         }
 
-        dbInsert($id, $pass, $age, $gender);
+        $lName = extraction($_POST["lName"]);
+        $fName = extraction($_POST["fName"]);
+        $age = extraction($_POST["age"]);
+        $gender = extraction($_POST["gender"]);
+        dbInsert($userName, $password, $age, $gender, $fName, $lName);
     }
 }
 
@@ -94,7 +85,7 @@ function fileValidate($id,$pass, $pErr, $idErr)
     }
 }
 
-function dbValidate($id,$pass, $pErr, $idErr)
+function dbValidate($id,$password, $pErr, $idErr)
 {
     //Connect to MySQL Server
     $conn = mysqli_connect($GLOBALS['dbHost'], $GLOBALS['dbUser'], $GLOBALS['dbPass']);
@@ -141,7 +132,7 @@ function dbValidate($id,$pass, $pErr, $idErr)
 
 }
 
-function dbInsert($id,$pass, $age, $gender){
+function dbInsert($userName, $password, $age, $gender, $fName, $lName){
 
     //Connect to MySQL Server
     $conn = mysqli_connect($GLOBALS['dbHost'], $GLOBALS['dbUser'], $GLOBALS['dbPass'], $GLOBALS['dbName']);
@@ -151,14 +142,26 @@ function dbInsert($id,$pass, $age, $gender){
         die("Connection failed: " . $conn->connect_error);
     }
 
+    echo "hello";
+    echo $userName;
+    echo $fName;
+    echo $lName;
+    echo $age;
+    echo $password;
+    echo $gender;
+    echo "hello";
     // Create database
+    /*$sql = "insert into users
+
+            (id, userName, firstName, lastName, age, gender, password)
+            values 
+            (" + "'" + $userName + "','" + $fName + "','" + $lName + "'," + $age + ",'" + $gender + "','" + $password + "'" + ");";
+    */
+
     $sql = "insert into users
-(id, userName, firstName, lastName, age, gender, password
-)
-values 
-(
-1, 'alpha', 'alpha', 'alphaalpha', 20, 'm', 'alpha' 
-);";
+            (username, firstname, lastname, age, gender, password)
+            VALUES 
+            ('alpha', 'alpha', 'alpha', 25, 'M', 'alpha')";
     if ($conn->query($sql) === TRUE) {
         echo "Successfully Done";
     } else {

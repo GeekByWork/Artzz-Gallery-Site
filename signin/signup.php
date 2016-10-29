@@ -15,7 +15,7 @@ $content = "
                     Choose a User Name:
                 </div>
                 <div class='col-md-2'>
-                    <input name='id' type='text' />
+                    <input name='userName' type='text' />
                 </div>
             </div>
             <br />
@@ -25,7 +25,7 @@ $content = "
                     First Name:
                 </div>
                 <div class='col-md-2'>
-                    <input name='fname' type='text' />
+                    <input name='fName' type='text' />
                 </div>
             </div>
             <br />
@@ -35,7 +35,7 @@ $content = "
                     Last Name:
                 </div>
                 <div class='col-md-2'>
-                    <input name='lname' type='text' />
+                    <input name='lName' type='text' />
                 </div>
             </div>
             <br />
