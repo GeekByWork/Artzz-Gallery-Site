@@ -22,6 +22,26 @@ $content = "
             <div class='row'>
                 <div class='col-md-4'></div>
                 <div class='col-md-2' style='text-align: left'>
+                    First Name:
+                </div>
+                <div class='col-md-2'>
+                    <input name='fname' type='text' />
+                </div>
+            </div>
+            <br />
+            <div class='row'>
+                <div class='col-md-4'></div>
+                <div class='col-md-2' style='text-align: left'>
+                    Last Name:
+                </div>
+                <div class='col-md-2'>
+                    <input name='lname' type='text' />
+                </div>
+            </div>
+            <br />
+            <div class='row'>
+                <div class='col-md-4'></div>
+                <div class='col-md-2' style='text-align: left'>
                     Choose a Password:
                 </div>
                 <div class='col-md-2'>

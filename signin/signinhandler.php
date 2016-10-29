@@ -38,6 +38,12 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
         } else {
             $pass = extraction($_POST["password"]);
         }
+        if (!empty($_POST["lname"])) {
+            $age = extraction($_POST["lname"]);
+        }
+        if (!empty($_POST["fname"])) {
+            $age = extraction($_POST["fname"]);
+        }
         if (!empty($_POST["age"])) {
             $age = extraction($_POST["age"]);
         }
