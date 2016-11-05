@@ -1,6 +1,16 @@
 <?php
 $title = "Artzz - Art at Best";
 $content = "Artzz Gallery";
+$paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 5', 'Painting 6', 'Painting 7', 'Painting 8', 'Painting 9'];
+
+foreach($paintings as $value) {
+    $cookieName = str_replace(' ', '', $value);
+    if (!isset($_COOKIE[$cookieName])) {
+        setcookie($cookieName, 0);
+        $_COOKIE[$cookieName] = 0;
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +43,7 @@ $content = "Artzz Gallery";
     <div id="greywrap">
         <div class="row">
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting1">
+                <a href="./FullSizeView.php?name=Painting1&img=gallery1">
                     <h3>Painting 1</h3>
                 <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery1.jpg" alt="">
                 <p>It's not only a painting, it's a story.</p>
@@ -41,7 +51,7 @@ $content = "Artzz Gallery";
             </div>
 
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting2">
+                <a href="./FullSizeView.php?name=Painting2&img=gallery2">
                     <h3>Painting 2</h3>
                 <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery2.jpg" alt="">
                 <p>It's not only a painting, it's a story.</p>
@@ -49,7 +59,7 @@ $content = "Artzz Gallery";
             </div>
 
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting3">
+                <a href="./FullSizeView.php?name=Painting3&img=gallery3">
                 <h3>Painting 3</h3>
                 <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery3.jpg" alt="">
                 <p>It's not only a painting, it's a story.</p>
@@ -58,7 +68,7 @@ $content = "Artzz Gallery";
         </div>
         <div class="row">
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting4">
+                <a href="./FullSizeView.php?name=Painting4&img=gallery4">
                 <h3>Painting 4</h3>
                 <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery4.jpg" alt="">
                 <p>It's not only a painting, it's a story.</p>
@@ -66,7 +76,7 @@ $content = "Artzz Gallery";
             </div>
 
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting5">
+                <a href="./FullSizeView.php?name=Painting5&img=gallery5">
                 <h3>Painting 5</h3>
                 <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery5.jpg" alt="">
                 <p>It's not only a painting, it's a story.</p>
@@ -74,7 +84,7 @@ $content = "Artzz Gallery";
             </div>
 
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting6">
+                <a href="./FullSizeView.php?name=Painting6&img=gallery6">
                     <h3>Painting 6</h3>
                     <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery6.jpg" alt="">
                     <p>It's not only a painting, it's a story.</p>
@@ -83,7 +93,7 @@ $content = "Artzz Gallery";
         </div>
         <div class="row">
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting7">
+                <a href="./FullSizeView.php?name=Painting7&img=gallery7">
                     <h3>Painting 7</h3>
                 <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery7.jpg" alt="">
                 <p>It's not only a painting, it's a story.</p>
@@ -91,7 +101,7 @@ $content = "Artzz Gallery";
             </div>
 
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting8">
+                <a href="./FullSizeView.php?name=Painting8&img=gallery8">
                     <h3>Painting 8</h3>
                 <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery8.jpg" alt="">
                 <p>It's not only a painting, it's a story.</p>
@@ -99,7 +109,7 @@ $content = "Artzz Gallery";
             </div>
 
             <div class="col-lg-4 callout">
-                <a href="./FullSizeView.php?painting9">
+                <a href="./FullSizeView.php?name=Painting9&img=gallery9">
                 <h3>Painting 9</h3>
                 <img width="200" height="170" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery9.jpg" alt="">
                 <p>It's not only a painting, it's a story.</p>
@@ -109,10 +119,6 @@ $content = "Artzz Gallery";
     </div>
 </div>
 
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/retina.js"></script>
-<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-<script type="text/javascript" src="assets/js/jquery-func.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
