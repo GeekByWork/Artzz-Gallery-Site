@@ -1,4 +1,4 @@
-<?php
+ <?php
 $title = "All Users";
 $link = "../signin/";
 $linkText = "Sign In";
