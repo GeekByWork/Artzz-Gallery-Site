@@ -3,14 +3,6 @@ $title = "Artzz - Art at Best";
 $content = "Artzz Gallery";
 $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 5', 'Painting 6', 'Painting 7', 'Painting 8', 'Painting 9'];
 
-foreach($paintings as $value) {
-    $cookieName = str_replace(' ', '', $value);
-    if (!isset($_COOKIE[$cookieName])) {
-        setcookie($cookieName, 0);
-        $_COOKIE[$cookieName] = 0;
-    }
-}
-
 ?>
 
 <!DOCTYPE html>
