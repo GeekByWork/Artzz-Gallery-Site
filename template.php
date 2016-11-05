@@ -106,7 +106,7 @@
     <h2 class="centered">OUR PAINTINGS - AS REAL AS YOUR DAILY LIFE.</h2>
     <hr>
     <div style="text-align: right;">
-        <a href="./Gallery.php">See all paintings</a>
+        <a href="./Gallery">See all paintings</a>
     </div>
     <br>
     <div class="row">
