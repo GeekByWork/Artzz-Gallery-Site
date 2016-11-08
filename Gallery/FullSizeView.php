@@ -54,7 +54,7 @@ else
     setcookie('recentlyVisited', $result);
     $_COOKIE['recentlyVisited'] = $result;
 
-    foreach ($result as $x)
+    foreach ($_COOKIE['recentlyVisited'] as $x)
     {
         echo $x;
     }
