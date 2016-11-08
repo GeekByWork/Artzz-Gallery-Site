@@ -15,7 +15,6 @@ foreach ($paintings as $painting)
 if(isset($_COOKIE['recentlyVisited']))
 {
     $recent = $_COOKIE['recentlyVisited'];
-    echo 'at 1';
 }
 else
 {
