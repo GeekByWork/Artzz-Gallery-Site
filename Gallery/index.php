@@ -61,6 +61,8 @@ arsort($paintingsData);
             $f = 0;
             foreach ($paintingsData as $x => $x_value)
             {
+                if($x_value==0)
+                    continue;
                 if($f==0)
                 {
                     echo '<div class="item active">
