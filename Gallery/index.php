@@ -48,7 +48,7 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-            Most Visited
+            <div style="text-align: center;">Most Visited</div>
             <div class="item active">
                 <img width="200;" height="180" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery1.jpg" alt="Chania">
             </div>
