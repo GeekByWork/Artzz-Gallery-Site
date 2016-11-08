@@ -42,84 +42,131 @@ arsort($paintingsData);
 
 <div class="container">
 
+    <div style="text-align: center" class="row">
+        <div class="col-md-6">
+            <div style="width: 500px;" id="mostVisitedCarousel" class="carousel slide" data-ride="carousel">
+                <div style="text-align: center;">Most Visited</div>
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <?php
+                    $f = $i = 0;
+                    foreach ($paintingsData as $x => $x_value)
+                    {
+                        if($x_value==0)
+                            continue;
+                        if($f==0) {
+                            echo '<li data-target="#mostVisitedCarousel" data-slide-to="'.$i.'" class="active"></li>';
+                            $f = 1;
+                        }else
+                            echo '<li data-target="#mostVisitedCarousel" data-slide-to="'.$i.'"></li>';
+                        $i++;
+                    }
+                    ?>
+                </ol>
 
-
-
-    <div style="width: 500PX;" id="myCarousel" class="carousel slide" data-ride="carousel">
-        <div style="text-align: center;">Most Visited</div>
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <?php
-            $f = $i = 0;
-            foreach ($paintingsData as $x => $x_value)
-            {
-                if($x_value==0)
-                    continue;
-                if($f==0) {
-                    echo '<li data-target="#myCarousel" data-slide-to="'.$i.'" class="active"></li>';
-                    $f = 1;
-                }else
-                    echo '<li data-target="#myCarousel" data-slide-to="'.$i.'"></li>';
-                $i++;
-            }
-            ?>
-            <!--
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            -->
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <?php
-            $f = 0;
-            foreach ($paintingsData as $x => $x_value)
-            {
-                if($x_value==0)
-                    continue;
-                if($f==0)
-                {
-                    echo '<div class="item active">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <?php
+                    $f = 0;
+                    foreach ($paintingsData as $x => $x_value)
+                    {
+                        if($x_value==0)
+                            continue;
+                        if($f==0)
+                        {
+                            echo '<div class="item active">
                     <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
                     </div>';
-                $f = 1;
-                }
-                else {
-                    echo '<div class="item">
+                            $f = 1;
+                        }
+                        else {
+                            echo '<div class="item">
                     <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
                     </div>';
-                }
-            }
-            ?>
-            <!--
-            <div class="item">
-                <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery2.jpg" alt="Chania">
+                        }
+                    }
+                    ?>
+                    <!--
+                    <div class="item">
+                        <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery2.jpg" alt="Chania">
+                    </div>
+                    <div class="item">
+                        <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery3.jpg" alt="Flower">
+                    </div>
+                    <div class="item">
+                        <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery4.jpg" alt="Flower">
+                    </div>
+                    -->
+                </div>
+
+                <!-- Left and right controls -->
+                <a style="background: #e6e6e6" class="left carousel-control" href="#mostVisitedCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a style="background: #e6e6e6" class="right carousel-control" href="#mostVisitedCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <div class="item">
-                <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery3.jpg" alt="Flower">
-            </div>
-            <div class="item">
-                <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery4.jpg" alt="Flower">
-            </div>
-            -->
         </div>
+        <div class="col-md-6">
+            <div style="width: 500px;" id="#recentlyVisitedCarousel" class="carousel slide" data-ride="carousel">
+                <div style="text-align: center;">Most Visited</div>
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <?php
+                    $f = $i = 0;
+                    foreach ($paintingsData as $x => $x_value)
+                    {
+                        if($x_value==0)
+                            continue;
+                        if($f==0) {
+                            echo '<li data-target="#recentlyVisitedCarousel" data-slide-to="'.$i.'" class="active"></li>';
+                            $f = 1;
+                        }else
+                            echo '<li data-target="#recentlyVisitedCarousel" data-slide-to="'.$i.'"></li>';
+                        $i++;
+                    }
+                    ?>
+                </ol>
 
-        <!-- Left and right controls -->
-        <a style="background: #e6e6e6" class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a style="background: #e6e6e6" class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <?php
+                    $f = 0;
+                    foreach ($paintingsData as $x => $x_value)
+                    {
+                        if($x_value==0)
+                            continue;
+                        if($f==0)
+                        {
+                            echo '<div class="item active">
+                    <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
+                    </div>';
+                            $f = 1;
+                        }
+                        else {
+                            echo '<div class="item">
+                    <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
+                    </div>';
+                        }
+                    }
+                    ?>
+                </div>
+
+                <!-- Left and right controls -->
+                <a style="background: #e6e6e6" class="left carousel-control" href="#recentlyVisitedCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a style="background: #e6e6e6" class="right carousel-control" href="#recentlyVisitedCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
     </div>
-
-
-
-
 
     <div id="greywrap">
         <div class="row">
