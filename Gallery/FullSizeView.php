@@ -24,8 +24,6 @@ else
 
 $visitedCount = $_COOKIE[$paintingName];
 
-if(isset($_COOKIE['recentlyVisited']))
-{
     $my_array = $_COOKIE['recentlyVisited'];
     if(array_search($paintingName, $my_array)==1)
     {
@@ -35,12 +33,6 @@ if(isset($_COOKIE['recentlyVisited']))
     array_unshift($result, $paintingName);
     setcookie('recentlyVisited', $result);
     $_COOKIE['recentlyVisited'] = $result;
-}
-else
-{
-    setcookie('recentlyVisited', array($paintingName));
-    $_COOKIE['recentlyVisited'] = array($paintingName);
-}
 
 
 include 'FullSizeViewTemplate.php';

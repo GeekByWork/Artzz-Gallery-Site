@@ -9,9 +9,19 @@ foreach ($paintings as $painting)
 {
     if(isset($_COOKIE[$painting])) {
         $paintingsData[$painting] = $_COOKIE[$painting];
-        $recent = $_COOKIE['recentlyVisited'];
     }
 }
+
+if(isset($_COOKIE['recentlyVisited']))
+{
+    $recent = $_COOKIE['recentlyVisited'];
+}
+else
+{
+    setcookie('recentlyVisited', array());
+    $_COOKIE['recentlyVisited'] = array();
+}
+
 arsort($paintingsData);
 
 foreach ($recent as $x)
