@@ -26,7 +26,7 @@ $visitedCount = $_COOKIE[$paintingName];
 
     echo 0;
     if(count($_COOKIE['recentlyVisited'])==0)
-        echo "Empty";
+        echo "Empty COOKIE['recentlyVisited']";
     $my_array = $_COOKIE['recentlyVisited'];
     echo 1;
     foreach ($my_array as $x)
@@ -46,7 +46,11 @@ $visitedCount = $_COOKIE[$paintingName];
         echo $x;
     }
     echo 4;
+if(count($result)==0)
+    $result = array($paintingName);
+else
     array_unshift($result, $paintingName);
+
     setcookie('recentlyVisited', $result);
     $_COOKIE['recentlyVisited'] = $result;
 
