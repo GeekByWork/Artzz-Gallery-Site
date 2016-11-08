@@ -13,11 +13,6 @@ foreach ($paintings as $painting)
 }
 
 if(isset($_COOKIE['recentlyVisited']))
-    echo "true";
-else
-    echo "false";
-
-if(isset($_COOKIE['recentlyVisited']))
 {
     $recent = json_decode(stripslashes($_COOKIE['recentlyVisited']), true);
 }

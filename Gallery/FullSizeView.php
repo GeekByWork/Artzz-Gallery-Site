@@ -25,7 +25,7 @@ else
 $visitedCount = $_COOKIE[$paintingName];
 
 if(isset($_COOKIE["recentlyVisited"])) {
-    $my_array = $_COOKIE["recentlyVisited"];
+    $my_array = json_decode(stripslashes($_COOKIE["recentlyVisited"]), true);
     if(array_search($paintingName, $my_array)==1)
     {
         $to_remove = array($paintingName);
