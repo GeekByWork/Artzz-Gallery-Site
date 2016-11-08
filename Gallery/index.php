@@ -19,7 +19,7 @@ else
 
 if(isset($_COOKIE['recentlyVisited']))
 {
-    $recent = stripslashes($_COOKIE['recentlyVisited']);
+    $recent = json_decode(stripslashes($_COOKIE['recentlyVisited']), true);
 }
 
 arsort($paintingsData);
