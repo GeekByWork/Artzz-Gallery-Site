@@ -58,5 +58,9 @@ else
     {
         echo $x;
     }
+if(isset($_COOKIE['recentlyVisited']))
+    echo "true";
+else
+    echo "false";
 
 include 'FullSizeViewTemplate.php';
