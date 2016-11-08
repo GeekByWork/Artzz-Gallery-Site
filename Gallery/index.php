@@ -1,8 +1,16 @@
 <?php
 $title = "Artzz - Art at Best";
 $content = "Artzz Gallery";
+$paintingsData = array();
 $paintings = ['Painting1', 'Painting2', 'Painting3', 'Painting4', 'Painting5', 'Painting6', 'Painting7', 'Painting8', 'Painting9'];
-
+$gallery = ['Painting1'=>'gallery1', 'Painting2'=>'gallery2', 'Painting3'=>'gallery3', 'Painting4'=>'gallery4', 'Painting5'=>'gallery5', 'Painting6'=>'gallery6', 'Painting7'=>'gallery7', 'Painting8'=>'gallery8', 'Painting9'=>'gallery9'];
+foreach ($paintings as $painting)
+{
+    if(isset($_COOKIE[$painting])) {
+        $paintingsData[$painting] = $_COOKIE[$painting];
+    }
+}
+arsort($paintingsData);
 ?>
 
 <!DOCTYPE html>
@@ -50,15 +58,24 @@ $paintings = ['Painting1', 'Painting2', 'Painting3', 'Painting4', 'Painting5', '
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <?php
-            arsort()
+            $f = 0;
+            foreach ($paintingsData as $x => $x_value)
+            {
+                if($f==0)
+                {
+                    echo '<div class="item active">
+                    <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
+                    </div>';
+                $f = 1;
+                }
+                else {
+                    echo '<div class="item">
+                    <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
+                    </div>';
+                }
+            }
             ?>
-
-            <div class="item active">
-                <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery1.jpg" alt="Chania">
-                <div class="carousel-caption">
-                    <h3>Most Visited (<?php echo "a" ?>)</h3>
-                </div>
-            </div>
+            <!--
             <div class="item">
                 <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery2.jpg" alt="Chania">
             </div>
@@ -68,6 +85,7 @@ $paintings = ['Painting1', 'Painting2', 'Painting3', 'Painting4', 'Painting5', '
             <div class="item">
                 <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery4.jpg" alt="Flower">
             </div>
+            -->
         </div>
 
         <!-- Left and right controls -->
