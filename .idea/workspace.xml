@@ -109,8 +109,8 @@
       <file leaf-file-name="FullSizeView.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gallery/FullSizeView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="568">
+              <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -359,12 +359,12 @@
       <workItem from="1478481496631" duration="1116000" />
       <workItem from="1478485827571" duration="25000" />
       <workItem from="1478487190605" duration="927000" />
-      <workItem from="1478577570858" duration="15023000" />
+      <workItem from="1478577570858" duration="15352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60921000" />
+    <option name="totallyTimeSpent" value="61250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1309" height="744" extended-state="6" />
@@ -943,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gallery/FullSizeView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        <state relative-caret-position="568">
+          <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
           <folding />
         </state>
       </provider>

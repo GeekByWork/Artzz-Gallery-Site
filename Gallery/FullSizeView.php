@@ -30,28 +30,28 @@ if(isset($_COOKIE["recentlyVisited"])) {
     echo 'at a';
     if(array_search($paintingName, $my_array)==1) {
         $to_remove = array($paintingName);
-        $result = array_diff($my_array, $to_remove);
-        if (count($result) == 0)
-            $result = array($paintingName);
+        $my_array = array_diff($my_array, $to_remove);
+        if (count($my_array) == 0)
+            $my_array = array($paintingName);
         else
-            array_unshift($result, $paintingName);
+            array_unshift($my_array, $paintingName);
     }
     else
     {
         echo 'at b';
         echo count($my_array);
         if (count($my_array) == 0)
-            $result = array($paintingName);
+            $my_array = array($paintingName);
         else
-            array_unshift($result, $paintingName);
+            array_unshift($my_array, $paintingName);
     }
 }
 else
 {
-    $result = array($paintingName);
+    $my_array = array($paintingName);
 }
 
-setcookie("recentlyVisited", json_encode($result));
-$_COOKIE["recentlyVisited"] = json_encode($result);
+setcookie("recentlyVisited", json_encode($my_array));
+$_COOKIE["recentlyVisited"] = json_encode($my_array);
 
 include 'FullSizeViewTemplate.php';
