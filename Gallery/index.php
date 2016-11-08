@@ -13,6 +13,11 @@ foreach ($paintings as $painting)
     }
 }
 arsort($paintingsData);
+
+foreach ($recent as $x)
+{
+    echo $x;
+}
 ?>
 
 <!DOCTYPE html>
