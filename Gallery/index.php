@@ -21,6 +21,7 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
     <script src="../assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -145,7 +146,5 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
         </div>
     </div>
 </div>
-
-<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
