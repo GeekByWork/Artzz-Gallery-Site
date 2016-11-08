@@ -23,4 +23,12 @@ else
 }
 
 $visitedCount = $_COOKIE[$paintingName];
+
+$my_array = $_COOKIE['recentlyVisited'];
+$to_remove = array($paintingName);
+$result = array_diff($my_array, $to_remove);
+
+array_unshift($result, $paintingName);
+$_COOKIE['recentlyVisited'] = $result;
+
 include 'FullSizeViewTemplate.php';

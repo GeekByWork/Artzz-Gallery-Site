@@ -4,10 +4,12 @@ $content = "Artzz Gallery";
 $paintingsData = array();
 $paintings = ['Painting1', 'Painting2', 'Painting3', 'Painting4', 'Painting5', 'Painting6', 'Painting7', 'Painting8', 'Painting9'];
 $gallery = ['Painting1'=>'gallery1', 'Painting2'=>'gallery2', 'Painting3'=>'gallery3', 'Painting4'=>'gallery4', 'Painting5'=>'gallery5', 'Painting6'=>'gallery6', 'Painting7'=>'gallery7', 'Painting8'=>'gallery8', 'Painting9'=>'gallery9'];
+$recent = [];
 foreach ($paintings as $painting)
 {
     if(isset($_COOKIE[$painting])) {
         $paintingsData[$painting] = $_COOKIE[$painting];
+        $recent = $_COOKIE['recentlyVisited'];
     }
 }
 arsort($paintingsData);
@@ -112,15 +114,13 @@ arsort($paintingsData);
         </div>
         <div class="col-md-6">
             <div style="width: 500px;" id="#recentlyVisitedCarousel" class="carousel slide" data-ride="carousel">
-                <div style="text-align: center;">Most Visited</div>
+                <div style="text-align: center;">Recently Visited</div>
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <?php
                     $f = $i = 0;
-                    foreach ($paintingsData as $x => $x_value)
+                    foreach ($recent as $x)
                     {
-                        if($x_value==0)
-                            continue;
                         if($f==0) {
                             echo '<li data-target="#recentlyVisitedCarousel" data-slide-to="'.$i.'" class="active"></li>';
                             $f = 1;
@@ -135,21 +135,19 @@ arsort($paintingsData);
                 <div class="carousel-inner" role="listbox">
                     <?php
                     $f = 0;
-                    foreach ($paintingsData as $x => $x_value)
+                    foreach ($recent as $x)
                     {
-                        if($x_value==0)
-                            continue;
                         if($f==0)
                         {
                             echo '<div class="item active">
-                    <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
-                    </div>';
+                            <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
+                            </div>';
                             $f = 1;
                         }
                         else {
                             echo '<div class="item">
-                    <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
-                    </div>';
+                            <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/' . $gallery[$x] . '.jpg">
+                            </div>';
                         }
                     }
                     ?>
