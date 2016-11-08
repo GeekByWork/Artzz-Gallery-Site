@@ -49,7 +49,7 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="../assets/img/gallery1.jpg" alt="Chania">
+                <img width="200px;" height="200px;" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery1.jpg" alt="Chania">
             </div>
 
             <div class="item">
