@@ -1,8 +1,11 @@
 <?php
 $title = "Artzz - Art at Best";
 $content = "Artzz Gallery";
-$paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 5', 'Painting 6', 'Painting 7', 'Painting 8', 'Painting 9'];
+$paintings = ['Painting1', 'Painting2', 'Painting3', 'Painting4', 'Painting5', 'Painting6', 'Painting7', 'Painting8', 'Painting9'];
 
+foreach() {
+    if(isset($_COOKIE[$paintingName]))
+}
 ?>
 
 <!DOCTYPE html>
@@ -49,20 +52,24 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
+            <?php
+            arsort()
+            ?>
+
             <div class="item active">
-                <img width="200;" height="180" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery1.jpg" alt="Chania">
+                <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery1.jpg" alt="Chania">
+                <div class="carousel-caption">
+                    <h3>Most Visited (<?php echo "a" ?>)</h3>
+                </div>
             </div>
-
             <div class="item">
-                <img width="200;" height="180" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery2.jpg" alt="Chania">
+                <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery2.jpg" alt="Chania">
             </div>
-
             <div class="item">
-                <img width="200;" height="180" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery3.jpg" alt="Flower">
+                <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery3.jpg" alt="Flower">
             </div>
-
             <div class="item">
-                <img width="200;" height="180" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery4.jpg" alt="Flower">
+                <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery4.jpg" alt="Flower">
             </div>
         </div>
 

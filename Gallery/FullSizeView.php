@@ -3,7 +3,6 @@ $title = "Artzz - Art at Best";
 $content = "Artworks you have never seen before.";
 $paintingName = "";
 $imgLink = "";
-$cookieName = "";
 
 if ($_SERVER["REQUEST_METHOD"]=="GET")
 {
@@ -11,18 +10,17 @@ if ($_SERVER["REQUEST_METHOD"]=="GET")
     $imgLink = $_GET["img"];
 }
 
-$cookieName = $paintingName;
-if(isset($_COOKIE[$cookieName])) {
-    $temp = $_COOKIE[$cookieName];
+if(isset($_COOKIE[$paintingName])) {
+    $temp = $_COOKIE[$paintingName];
     $temp += 1;
-    setcookie($cookieName, $temp);
-    $_COOKIE[$cookieName] = $temp;
+    setcookie($paintingName, $temp);
+    $_COOKIE[$paintingName] = $temp;
 }
 else
 {
-    setcookie($cookieName, 1);
-    $_COOKIE[$cookieName] = 1;
+    setcookie($paintingName, 1);
+    $_COOKIE[$paintingName] = 1;
 }
 
-$visitedCount = $_COOKIE[$cookieName];
+$visitedCount = $_COOKIE[$paintingName];
 include 'FullSizeViewTemplate.php';
