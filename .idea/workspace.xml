@@ -4,9 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7400927d-9807-412a-a2a5-0b291ceea29e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gallery/index.php" afterPath="$PROJECT_DIR$/Gallery/index.php" />
-    </list>
+    <list default="true" id="7400927d-9807-412a-a2a5-0b291ceea29e" name="Default" comment="" />
     <ignored path="cmpe272.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -363,12 +361,12 @@
       <workItem from="1478481496631" duration="1116000" />
       <workItem from="1478485827571" duration="25000" />
       <workItem from="1478487190605" duration="927000" />
-      <workItem from="1478577570858" duration="3401000" />
+      <workItem from="1478577570858" duration="3859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49299000" />
+    <option name="totallyTimeSpent" value="49757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1309" height="744" extended-state="6" />
