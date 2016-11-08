@@ -51,6 +51,9 @@ else
     $my_array = array($paintingName);
 }
 
+foreach ($my_array as $item) {
+    echo $item;
+}
 setcookie("recentlyVisited", json_encode($my_array));
 $_COOKIE["recentlyVisited"] = json_encode($my_array);
 
