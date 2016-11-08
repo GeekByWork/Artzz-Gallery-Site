@@ -41,7 +41,7 @@ else
     $result = array($paintingName);
 }
 
-setcookie('recentlyVisited', $result);
-$_COOKIE['recentlyVisited'] = $result;
+setcookie("recentlyVisited", $result);
+$_COOKIE["recentlyVisited"] = $result;
 
 include 'FullSizeViewTemplate.php';
