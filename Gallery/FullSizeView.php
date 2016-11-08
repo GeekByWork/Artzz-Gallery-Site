@@ -26,6 +26,8 @@ $visitedCount = $_COOKIE[$paintingName];
 
 if(isset($_COOKIE["recentlyVisited"])) {
     $my_array = json_decode(stripslashes($_COOKIE["recentlyVisited"]), true);
+    echo array_search($paintingName, $my_array);
+    echo 'at a';
     if(array_search($paintingName, $my_array)==1) {
         $to_remove = array($paintingName);
         $result = array_diff($my_array, $to_remove);
@@ -36,6 +38,8 @@ if(isset($_COOKIE["recentlyVisited"])) {
     }
     else
     {
+        echo 'at b';
+        echo count($my_array);
         if (count($my_array) == 0)
             $result = array($paintingName);
         else
