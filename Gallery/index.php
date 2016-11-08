@@ -44,13 +44,13 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img src="..." alt="First slide">
+                <img src="../assets/img/gallery1.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img src="..." alt="Second slide">
+                <img src="../assets/img/gallery2.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img src="..." alt="Third slide">
+                <img src="../assets/img/gallery3.jpg" alt="Third slide">
             </div>
         </div>
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -66,7 +66,7 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
 
 
 
-    
+
     <div id="greywrap">
         <div class="row">
             <div class="col-lg-4 callout">
