@@ -5,16 +5,23 @@ $paintingsData = array();
 $paintings = ['Painting1', 'Painting2', 'Painting3', 'Painting4', 'Painting5', 'Painting6', 'Painting7', 'Painting8', 'Painting9'];
 $gallery = ['Painting1'=>'gallery1', 'Painting2'=>'gallery2', 'Painting3'=>'gallery3', 'Painting4'=>'gallery4', 'Painting5'=>'gallery5', 'Painting6'=>'gallery6', 'Painting7'=>'gallery7', 'Painting8'=>'gallery8', 'Painting9'=>'gallery9'];
 $recent = [];
+$recentVisible = $mostVisitedVisible = "none";
 foreach ($paintings as $painting)
 {
     if(isset($_COOKIE[$painting])) {
+        if($_COOKIE[$painting]==0)
+            continue;
         $paintingsData[$painting] = $_COOKIE[$painting];
     }
 }
 
+if(count($paintingsData)>0)
+    $mostVisitedVisible = "block";
+
 if(isset($_COOKIE['recentlyVisited']))
 {
     $recent = json_decode(stripslashes($_COOKIE['recentlyVisited']), true);
+    $recentVisible = "block";
 }
 
 arsort($paintingsData);
@@ -52,7 +59,7 @@ arsort($paintingsData);
 
     <div style="text-align: center" class="row">
         <div class="col-md-6">
-            <div style="width: 500px;" id="mostVisitedCarousel" class="carousel slide" data-ride="carousel">
+            <div style="width: 500px;display: <?php echo $mostVisitedVisible; ?>;" id="mostVisitedCarousel" class="carousel slide" data-ride="carousel">
                 <div style="text-align: center;">Most Visited</div>
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -94,17 +101,6 @@ arsort($paintingsData);
                         }
                     }
                     ?>
-                    <!--
-                    <div class="item">
-                        <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery2.jpg" alt="Chania">
-                    </div>
-                    <div class="item">
-                        <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery3.jpg" alt="Flower">
-                    </div>
-                    <div class="item">
-                        <img width="200;" height="180" style="opacity:0.7;margin-left: auto;margin-right: auto;" src="../assets/img/gallery4.jpg" alt="Flower">
-                    </div>
-                    -->
                 </div>
 
                 <!-- Left and right controls -->
@@ -119,7 +115,7 @@ arsort($paintingsData);
             </div>
         </div>
         <div class="col-md-6">
-            <div style="width: 500px;" id="#recentlyVisitedCarousel" class="carousel slide" data-ride="carousel">
+            <div style="width: 500px;display: <?php echo $recentVisible;?>;" id="#recentlyVisitedCarousel" class="carousel slide" data-ride="carousel">
                 <div style="text-align: center;">Recently Visited</div>
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
