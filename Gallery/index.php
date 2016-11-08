@@ -3,9 +3,6 @@ $title = "Artzz - Art at Best";
 $content = "Artzz Gallery";
 $paintings = ['Painting1', 'Painting2', 'Painting3', 'Painting4', 'Painting5', 'Painting6', 'Painting7', 'Painting8', 'Painting9'];
 
-foreach() {
-    if(isset($_COOKIE[$paintingName]))
-}
 ?>
 
 <!DOCTYPE html>
