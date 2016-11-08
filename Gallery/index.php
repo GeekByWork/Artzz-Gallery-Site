@@ -49,10 +49,26 @@ arsort($paintingsData);
         <div style="text-align: center;">Most Visited</div>
         <!-- Indicators -->
         <ol class="carousel-indicators">
+            <?php
+            $f = $i = 0;
+            foreach ($paintingsData as $x => $x_value)
+            {
+                if($x_value==0)
+                    continue;
+                if($f==0) {
+                    echo '<li data-target="#myCarousel" data-slide-to="'.$i.'" class="active"></li>';
+                    $f = 1;
+                }else
+                    echo '<li data-target="#myCarousel" data-slide-to="'.$i.'"></li>';
+                $i++;
+            }
+            ?>
+            <!--
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
+            -->
         </ol>
 
         <!-- Wrapper for slides -->
