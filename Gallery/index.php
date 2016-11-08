@@ -137,6 +137,7 @@ arsort($paintingsData);
                     $f = 0;
                     foreach ($recent as $x)
                     {
+                        echo $x;
                         if($f==0)
                         {
                             echo '<div class="item active">
