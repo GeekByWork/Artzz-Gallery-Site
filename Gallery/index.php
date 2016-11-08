@@ -15,11 +15,13 @@ foreach ($paintings as $painting)
 if(isset($_COOKIE['recentlyVisited']))
 {
     $recent = $_COOKIE['recentlyVisited'];
+    echo 'at 1';
 }
 else
 {
     setcookie('recentlyVisited', array());
     $_COOKIE['recentlyVisited'] = array();
+    echo 'at 2';
 }
 
 arsort($paintingsData);
