@@ -11,7 +11,11 @@ foreach ($paintings as $painting)
         $paintingsData[$painting] = $_COOKIE[$painting];
     }
 }
-echo isset($_COOKIE['recentlyVisited']);
+
+if(isset($_COOKIE['recentlyVisited']))
+    echo "true";
+else
+    echo "false";
 
 if(isset($_COOKIE['recentlyVisited']))
 {
