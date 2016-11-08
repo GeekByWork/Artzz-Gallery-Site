@@ -38,6 +38,7 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
 
 
     <div style="width: 500PX;" id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div style="text-align: center;">Most Visited</div>
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -48,7 +49,6 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-            <div style="text-align: center;">Most Visited</div>
             <div class="item active">
                 <img width="200;" height="180" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery1.jpg" alt="Chania">
             </div>
