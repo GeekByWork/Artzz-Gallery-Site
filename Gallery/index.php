@@ -37,7 +37,7 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
 
 
 
-    <div style="width: 500px;height: 200px;" id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div style="width: 500PX;" id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
