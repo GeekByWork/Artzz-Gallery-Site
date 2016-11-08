@@ -19,10 +19,6 @@ if(isset($_COOKIE['recentlyVisited']))
 
 arsort($paintingsData);
 
-foreach ($recent as $x)
-{
-    echo $x;
-}
 ?>
 
 <!DOCTYPE html>
