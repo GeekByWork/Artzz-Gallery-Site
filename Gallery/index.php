@@ -53,15 +53,15 @@ $paintings = ['Painting 1', 'Painting 2', 'Painting 3', 'Painting 4', 'Painting 
             </div>
 
             <div class="item">
-                <img src="../assets/img/gallery2.jpg" alt="Chania">
+                <img width="200px;" height="200px;" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery2.jpg" alt="Chania">
             </div>
 
             <div class="item">
-                <img src="../assets/img/gallery3.jpg" alt="Flower">
+                <img width="200px;" height="200px;" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery3.jpg" alt="Flower">
             </div>
 
             <div class="item">
-                <img src="../assets/img/gallery4.jpg" alt="Flower">
+                <img width="200px;" height="200px;" style="margin-left: auto;margin-right: auto;" src="../assets/img/gallery4.jpg" alt="Flower">
             </div>
         </div>
 
