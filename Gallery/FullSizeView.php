@@ -34,5 +34,9 @@ $visitedCount = $_COOKIE[$paintingName];
     setcookie('recentlyVisited', $result);
     $_COOKIE['recentlyVisited'] = $result;
 
+foreach ($result as $x)
+{
+    echo $x;
+}
 
 include 'FullSizeViewTemplate.php';
