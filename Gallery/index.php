@@ -21,12 +21,6 @@ if(isset($_COOKIE['recentlyVisited']))
 {
     $recent = $_COOKIE['recentlyVisited'];
 }
-else
-{
-    setcookie('recentlyVisited', array());
-    $_COOKIE['recentlyVisited'] = array();
-    echo 'at 2';
-}
 
 arsort($paintingsData);
 
