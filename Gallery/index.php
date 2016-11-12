@@ -26,6 +26,10 @@ if(isset($_COOKIE['recentlyVisited']))
 
 arsort($paintingsData);
 
+foreach ($paintingsData as $test) {
+    echo("<script>console.log('$test')</script>");
+}
+
 ?>
 
 <!DOCTYPE html>
