@@ -1,9 +1,16 @@
 <?php
+// create curl resource
 $ch = curl_init();
-$timeout = 5;
-curl_setopt($ch, CURLOPT_URL, 'http://geekbabu.com/api/users.php');
+
+// set url
+curl_setopt($ch, CURLOPT_URL, "http://google.com");
+
+//return the transfer as a string
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-$data = curl_exec($ch);
+
+// $output contains the output string
+$output = curl_exec($ch);
+echo $output;
+
+// close curl resource to free up system resources
 curl_close($ch);
-echo json_decode($data);
