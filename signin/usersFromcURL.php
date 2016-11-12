@@ -50,8 +50,8 @@ $users2 = json_decode($users2, true);
     echo "
     </br>
         Data from API : 'http://geekbabu.com/api/users.php'
-    </br>";
-    <hr>
+    </br>
+    <hr>";
     foreach ($users2 as $user)
     {
         echo "
