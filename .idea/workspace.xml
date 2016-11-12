@@ -96,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/signin/usersFromcURL.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
-              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+              <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -330,12 +330,12 @@
       <workItem from="1478485827571" duration="25000" />
       <workItem from="1478487190605" duration="927000" />
       <workItem from="1478577570858" duration="16394000" />
-      <workItem from="1478919602225" duration="8326000" />
+      <workItem from="1478919602225" duration="8496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70618000" />
+    <option name="totallyTimeSpent" value="70788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1309" height="744" extended-state="6" />
@@ -834,7 +834,7 @@
     <entry file="file://$PROJECT_DIR$/signin/usersFromcURL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <caret line="3" column="74" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
           <folding />
         </state>
       </provider>
