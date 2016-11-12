@@ -43,6 +43,17 @@ $users2 = json_decode($users2, true);
 
     <script src="../assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/modernizr.custom.js"></script>
+    <style>
+        hr:before{
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0 !important;
+            width: 100% !important;
+            height: 2px;
+            background: #ccc;
+        }
+    </style>
 </head>
 <body>
 <div class='row' style='font-weight: bold'>
@@ -60,7 +71,7 @@ $users2 = json_decode($users2, true);
     <div class='col-md-2'>Home Address : " . $user['HomeAddr'] . "</div>
     <div class='col-md-2'>Home Phone : " . $user['Homephone'] . "</div>
     <div class='col-md-2'>Cell Phone : " . $user['Cellphone'] . "</div>
-    <div class='col-md-2'>Email : " . $user['Email'] . "</div></br><hr>";
+    <div class='col-md-2'>Email : " . $user['Email'] . "</div></br></br><hr>";
     }
 
     echo "
@@ -75,7 +86,7 @@ $users2 = json_decode($users2, true);
     <div class='col-md-2'>First Name : " . $user['firstname'] . "</div>
     <div class='col-md-2'>Last Name : " . $user['lastName'] . "</div>
     <div class='col-md-2'>Gender : " . $user['gender'] . "</div>
-    <div class='col-md-2'>Age : " . $user['age'] . "</div></br><hr>";
+    <div class='col-md-2'>Age : " . $user['age'] . "</div></br></br><hr>";
     }
     ?>
 

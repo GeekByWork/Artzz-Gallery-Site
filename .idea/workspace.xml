@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7400927d-9807-412a-a2a5-0b291ceea29e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signin/usersFromcURL.php" afterPath="$PROJECT_DIR$/signin/usersFromcURL.php" />
     </list>
     <ignored path="cmpe272.iws" />
@@ -105,12 +106,12 @@
       <file leaf-file-name="usersFromcURL.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/signin/usersFromcURL.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+            <state relative-caret-position="432">
+              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1478948297690" expanded="true" signature="2073:2091" ph="..." />
+                <marker date="1478948589290" expanded="true" signature="2333:2351" ph="..." />
               </folding>
             </state>
           </provider>
@@ -344,12 +345,12 @@
       <workItem from="1478485827571" duration="25000" />
       <workItem from="1478487190605" duration="927000" />
       <workItem from="1478577570858" duration="16394000" />
-      <workItem from="1478919602225" duration="13616000" />
+      <workItem from="1478919602225" duration="13905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75908000" />
+    <option name="totallyTimeSpent" value="76197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1309" height="744" extended-state="6" />
@@ -847,12 +848,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/signin/usersFromcURL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+        <state relative-caret-position="432">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1478948297690" expanded="true" signature="2073:2091" ph="..." />
+            <marker date="1478948589290" expanded="true" signature="2333:2351" ph="..." />
           </folding>
         </state>
       </provider>
