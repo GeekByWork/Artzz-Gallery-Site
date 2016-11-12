@@ -4,7 +4,6 @@ $dbHost = "localhost";
 $dbUser = "root";
 $dbPass = "mysql";
 $dbName = "artzz";
-$dbPort = "3306";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     return get_users();
@@ -29,12 +28,12 @@ function get_users()
         // Fetch one and one row
         while ($row=$result->fetch_assoc())
         {
-            array_push($users, array('username' => $row['username'], 'username' => $row['firstname'], 'lastname' => $row['lastname'], 'gender' => $row['gender'], 'age' => $row['age']));
+            $users[$i] = array('username' => $row['username'], 'username' => $row['firstname'], 'lastname' => $row['lastname'], 'gender' => $row['gender'], 'age' => $row['age']);
             $i++;
         }
         // Free result set
         mysqli_free_result($result);
     }
     $conn->close();
-    return $users;
+    return json_encode(array_values($users), JSON_PRETTY_PRINT);
 }
