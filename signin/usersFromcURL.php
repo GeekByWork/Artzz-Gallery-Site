@@ -3,7 +3,7 @@
 $ch = curl_init();
 
 // set url
-curl_setopt($ch, CURLOPT_URL, "http://google.com");
+curl_setopt($ch, CURLOPT_URL, "google.com");
 
 //return the transfer as a string
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
