@@ -15,7 +15,7 @@ $dbPort = "3306";
 $content1 = "
 <a href='./'><button style='float:left; margin-left: 50px;' class='btn btn-danger'>Back</button></a>
 <header class='clearfix'>
-    <strong>All Users:</strong>
+    <strong>All Users from DB :</strong>
     <br />
     <br />    
     <form id='allUsers' action='' method='post'>
