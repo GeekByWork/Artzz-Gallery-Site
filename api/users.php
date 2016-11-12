@@ -6,8 +6,7 @@ $dbPass = "mysql";
 $dbName = "artzz";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    echo "hello";
-    return get_users();
+    echo get_users();
 }
 
 function get_users()
