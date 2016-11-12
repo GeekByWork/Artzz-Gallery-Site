@@ -5,11 +5,9 @@ $ch = curl_init();
 // set url
 curl_setopt($ch, CURLOPT_URL, "https://juranet.tech/php/curl/user_list.php");
 
-//return the transfer as a string
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 // $output contains the output string
-$users = curl_exec($ch);
+$users = json_decode(curl_exec($ch), true);
 
 // close curl resource to free up system resources
 curl_close($ch);
