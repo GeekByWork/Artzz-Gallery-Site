@@ -30,6 +30,9 @@ $users2 = json_decode($users2, true);
 <!DOCTYPE html>
 <html>
 <div class='row' style='font-weight: bold'>
+    </br>
+        Data from API : 'https://juranet.tech/php/curl/user_list.php'
+    </br>
     <?php
 
     foreach ($users1 as $user)
@@ -43,6 +46,10 @@ $users2 = json_decode($users2, true);
     <div class='col-md-2'>Email : " . $user['Email'] . "</div></br><hr>";
     }
 
+    echo "
+    </br>
+        Data from API : 'http://geekbabu.com/api/users.php'
+    </br>";
     foreach ($users2 as $user)
     {
         echo "
