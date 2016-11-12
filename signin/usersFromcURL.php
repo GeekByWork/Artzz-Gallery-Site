@@ -56,6 +56,7 @@ $users2 = json_decode($users2, true);
     </style>
 </head>
 <body>
+    <a href='./'><button style='float:left; margin-left: 50px;' class='btn btn-danger'>Back</button></a>
     <div class="container">
         <div class='row' style='font-weight: bold'>
         </br>
