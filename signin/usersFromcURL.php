@@ -31,7 +31,7 @@ $users2 = json_decode($users2, true);
 <html>
 <div class='row' style='font-weight: bold'>
     </br>
-        Data from API : 'https://juranet.tech/php/curl/user_list.php'
+        <div style="text-align: center">Data from API : 'https://juranet.tech/php/curl/user_list.php'</div>
     </br>
     <hr>
     <?php
@@ -49,7 +49,7 @@ $users2 = json_decode($users2, true);
 
     echo "
     </br>
-        Data from API : 'http://geekbabu.com/api/users.php'
+        <div style=\"text-align: center\">Data from API : 'http://geekbabu.com/api/users.php'</div>
     </br>
     <hr>";
     foreach ($users2 as $user)
