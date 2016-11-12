@@ -35,22 +35,22 @@ $users2 = json_decode($users2, true);
     foreach ($users1 as $user)
     {
         echo "
-    <div class='col-md-2'>" . $user['Firstname'] . "</div>
-    <div class='col-md-2'>" . $user['LastName'] . "</div>
-    <div class='col-md-2'>" . $user['HomeAddr'] . "</div>
-    <div class='col-md-2'>" . $user['Homephone'] . "</div>
-    <div class='col-md-2'>" . $user['Cellphone'] . "</div>
-    <div class='col-md-2'>" . $user['Email'] . "</div>";
+    <div class='col-md-2'>First Name : " . $user['Firstname'] . "</div>
+    <div class='col-md-2'>Last Name : " . $user['LastName'] . "</div>
+    <div class='col-md-2'>Home Address : " . $user['HomeAddr'] . "</div>
+    <div class='col-md-2'>Home Phone : " . $user['Homephone'] . "</div>
+    <div class='col-md-2'>Cell Phone : " . $user['Cellphone'] . "</div>
+    <div class='col-md-2'>Email : " . $user['Email'] . "</div></br><hr>";
     }
 
     foreach ($users2 as $user)
     {
         echo "
-    <div class='col-md-2'>" . $user['username'] . "</div>
-    <div class='col-md-2'>" . $user['firstname'] . "</div>
-    <div class='col-md-2'>" . $user['lastName'] . "</div>
-    <div class='col-md-2'>" . $user['gender'] . "</div>
-    <div class='col-md-2'>" . $user['age'] . "</div>";
+    <div class='col-md-2'>User Name : " . $user['username'] . "</div>
+    <div class='col-md-2'>First Name : " . $user['firstname'] . "</div>
+    <div class='col-md-2'>Last Name : " . $user['lastName'] . "</div>
+    <div class='col-md-2'>Gender : " . $user['gender'] . "</div>
+    <div class='col-md-2'>Age : " . $user['age'] . "</div></br><hr>";
     }
     ?>
 
