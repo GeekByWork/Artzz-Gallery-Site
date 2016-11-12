@@ -1,8 +1,11 @@
 <?php
 $title = "Sign In";
 
-$link = "./allUsers.php";
-$linkText = "All Users";
+$link1 = "./allUsers.php";
+$link1Text = "All Users from DB";
+
+$link2 = "./usersFromcURL.php";
+$link2Text = "All Users from cURL";
 
 $content = "<header class='clearfix'>    <strong>ADMINISTRATOR LOGIN:</strong><br />    <br />    
 <form id='signin' action='./signinhandler.php' method='post'>User ID:<br />

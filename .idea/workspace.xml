@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7400927d-9807-412a-a2a5-0b291ceea29e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signin/usersFromcURL.php" afterPath="$PROJECT_DIR$/signin/usersFromcURL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signin/index.php" afterPath="$PROJECT_DIR$/signin/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signin/signingTemplate.php" afterPath="$PROJECT_DIR$/signin/signingTemplate.php" />
     </list>
     <ignored path="cmpe272.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,12 +80,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signingTemplate.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="signingTemplate.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/signin/signingTemplate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="0" selection-start-line="6" selection-start-column="4" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="244">
+              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/signin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <folding>
+                <marker date="1478948840450" expanded="true" signature="194:984" ph="..." />
+                <marker date="1478948840450" expanded="true" signature="317:753" ph="..." />
+                <marker date="1478948840450" expanded="true" signature="317:974" ph="..." />
+                <marker date="1478948840450" expanded="true" signature="406:463" ph="..." />
+                <marker date="1478948840450" expanded="true" signature="587:646" ph="..." />
+                <marker date="1478948840450" expanded="false" signature="812:829" ph="..." />
+                <marker date="1478948840450" expanded="false" signature="926:943" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usersFromcURL.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="usersFromcURL.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signin/usersFromcURL.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -140,10 +159,8 @@
         <option value="$PROJECT_DIR$/signin/signup.html" />
         <option value="$PROJECT_DIR$/signin/signuphandler.php" />
         <option value="$PROJECT_DIR$/signin/allUsers.html" />
-        <option value="$PROJECT_DIR$/signin/signingTemplate.php" />
         <option value="$PROJECT_DIR$/signin/signup.php" />
         <option value="$PROJECT_DIR$/signin/signinhandler.php" />
-        <option value="$PROJECT_DIR$/signin/index.php" />
         <option value="$PROJECT_DIR$/allPaintings.php" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
         <option value="$PROJECT_DIR$/Gallery.php" />
@@ -158,6 +175,8 @@
         <option value="$PROJECT_DIR$/signin/allUsers.php" />
         <option value="$PROJECT_DIR$/api/users.php" />
         <option value="$PROJECT_DIR$/signin/usersFromcURL.php" />
+        <option value="$PROJECT_DIR$/signin/index.php" />
+        <option value="$PROJECT_DIR$/signin/signingTemplate.php" />
       </list>
     </option>
   </component>
@@ -346,12 +365,12 @@
       <workItem from="1478485827571" duration="25000" />
       <workItem from="1478487190605" duration="927000" />
       <workItem from="1478577570858" duration="16394000" />
-      <workItem from="1478919602225" duration="13967000" />
+      <workItem from="1478919602225" duration="14172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76259000" />
+    <option name="totallyTimeSpent" value="76464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1309" height="744" extended-state="6" />
@@ -672,22 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <marker date="1477755747685" expanded="true" signature="115:905" ph="..." />
-            <marker date="1477755747685" expanded="true" signature="238:674" ph="..." />
-            <marker date="1477755747685" expanded="true" signature="238:895" ph="..." />
-            <marker date="1477755747685" expanded="true" signature="327:384" ph="..." />
-            <marker date="1477755747685" expanded="true" signature="508:567" ph="..." />
-            <marker date="1477755747685" expanded="false" signature="733:750" ph="..." />
-            <marker date="1477755747685" expanded="false" signature="847:864" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -796,11 +799,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signin/signingTemplate.php">
+    <entry file="file://$PROJECT_DIR$/signin/usersFromcURL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" selection-start-line="6" selection-start-column="4" selection-end-line="19" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1478948652109" expanded="true" signature="2441:2459" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -847,17 +856,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signin/usersFromcURL.php">
+    <entry file="file://$PROJECT_DIR$/signin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        <state relative-caret-position="72">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1478948652109" expanded="true" signature="2441:2459" ph="..." />
+            <marker date="1478948840450" expanded="true" signature="194:984" ph="..." />
+            <marker date="1478948840450" expanded="true" signature="317:753" ph="..." />
+            <marker date="1478948840450" expanded="true" signature="317:974" ph="..." />
+            <marker date="1478948840450" expanded="true" signature="406:463" ph="..." />
+            <marker date="1478948840450" expanded="true" signature="587:646" ph="..." />
+            <marker date="1478948840450" expanded="false" signature="812:829" ph="..." />
+            <marker date="1478948840450" expanded="false" signature="926:943" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signin/signingTemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
