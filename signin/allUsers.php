@@ -76,7 +76,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $searchText = test_input($_POST["searchText"]);
     $searchHTML = dbSearch($criteria, $searchText);
     $content = $content1 . $searchHTML . $content2;
-
 }
 
 function test_input($data) {
