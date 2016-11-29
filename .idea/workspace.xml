@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7400927d-9807-412a-a2a5-0b291ceea29e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/products.php" afterPath="$PROJECT_DIR$/api/products.php" />
     </list>
     <ignored path="cmpe272.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +57,11 @@
       <file leaf-file-name="products.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="424">
+              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
               <folding>
-                <marker date="1480427405647" expanded="true" signature="497:534" ph="select usern... users" />
-                <marker date="1480427405647" expanded="true" signature="497:542" ph="select produ... products" />
+                <marker date="1480427489365" expanded="true" signature="497:534" ph="select usern... users" />
+                <marker date="1480427489365" expanded="true" signature="497:542" ph="select produ... products" />
               </folding>
             </state>
           </provider>
@@ -427,12 +427,12 @@
       <workItem from="1478577570858" duration="16394000" />
       <workItem from="1478919602225" duration="14613000" />
       <workItem from="1478949399003" duration="208000" />
-      <workItem from="1480424407491" duration="2496000" />
+      <workItem from="1480424407491" duration="2562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79609000" />
+    <option name="totallyTimeSpent" value="79675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1309" height="744" extended-state="6" />
@@ -931,11 +931,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="424">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
-            <marker date="1480427405647" expanded="true" signature="497:534" ph="select usern... users" />
-            <marker date="1480427405647" expanded="true" signature="497:542" ph="select produ... products" />
+            <marker date="1480427489365" expanded="true" signature="497:534" ph="select usern... users" />
+            <marker date="1480427489365" expanded="true" signature="497:542" ph="select produ... products" />
           </folding>
         </state>
       </provider>

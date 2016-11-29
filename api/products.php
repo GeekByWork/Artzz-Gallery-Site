@@ -28,7 +28,7 @@ function get_products()
         // Fetch one and one row
         while ($row=$result->fetch_assoc())
         {
-            $products[$i] = array('$productName' => $row['productName'], 'description' => $row['description']);
+            $products[$i] = array('productName' => $row['productName'], 'description' => $row['description']);
             $i++;
         }
         // Free result set
