@@ -30,8 +30,8 @@ function get_products($id)
     
     $sql = "select id, name, quantity, image_url, price, description from products";
     if($id!=-1)
-        $sql = $sql + "where id = " . $id;
-    echo $sql;
+        $sql = $sql . "where id = " . $id;
+
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
