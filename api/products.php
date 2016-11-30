@@ -35,5 +35,5 @@ function get_products()
         mysqli_free_result($result);
     }
     $conn->close();
-    return json_encode(array_values($products), JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES);
+    return json_encode(array_values($products), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 }
