@@ -8,16 +8,16 @@ $dbName = "artzz";
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if(isset($_GET['id']))
     {
-        id = $_GET['id'];
+        $id = $_GET['id'];
     }
     else
     {
-        id = -1;
+        $id = -1;
     }
-    echo get_products(id);
+    echo get_products($id);
 }
 
-function get_products(id)
+function get_products($id)
 {
     $products = array();
     //Connect to MySQL Server
@@ -29,8 +29,8 @@ function get_products(id)
     }
     
     $sql = "select id, name, quantity, image_url, price, description from products";
-    if(id!=-1)
-        $sql = $sql + "where id = " + id;
+    if($id!=-1)
+        $sql = $sql + "where id = " + $id;
 
     $result = $conn->query($sql);
 
