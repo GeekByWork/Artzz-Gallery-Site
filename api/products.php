@@ -19,7 +19,7 @@ function get_products()
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "select name, quantity, image_url, price, description from products";
+    $sql = "select id, name, quantity, image_url, price, description from products";
 
     $result = $conn->query($sql);
 
