@@ -19,7 +19,7 @@ function get_products()
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "select productName, description from products";
+    $sql = "select name, quantity, image_url, price, description from products";
 
     $result = $conn->query($sql);
 
@@ -28,7 +28,7 @@ function get_products()
         // Fetch one and one row
         while ($row=$result->fetch_assoc())
         {
-            $products[$i] = array('productName' => $row['productName'], 'description' => $row['description']);
+            $products[$i] = array('id' => $row['id'], 'name' => $row['name'], 'quantity' => $row['quantity'], 'image_url' => $row['image_url'], 'price' => $row['price'], 'description' => $row['description']);
             $i++;
         }
         // Free result set
