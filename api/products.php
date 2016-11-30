@@ -6,10 +6,18 @@ $dbPass = "mysql";
 $dbName = "artzz";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    echo get_products();
+    if(isset($_GET['id']))
+    {
+        id = $_GET['id'];
+    }
+    else
+    {
+        id = -1;
+    }
+    echo get_products(id);
 }
 
-function get_products()
+function get_products(id)
 {
     $products = array();
     //Connect to MySQL Server
@@ -19,7 +27,10 @@ function get_products()
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    
     $sql = "select id, name, quantity, image_url, price, description from products";
+    if(id!=-1)
+        $sql = $sql + "where id = " + id;
 
     $result = $conn->query($sql);
 
