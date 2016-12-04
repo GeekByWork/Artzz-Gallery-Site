@@ -151,7 +151,7 @@
             <div class="col-lg-4 centered">
                 <br>
                 <p><img class="img img-circle" src="assets/img/team/team04.jpg" width="60px" height="60px"></p>
-                <h4>Jaye Smith</h4>
+                <h4>Umang Saxena</h4>
                 <h5>Published Aug 30.</h5>
             </div>
             <div class="col-lg-8 blog-content">
@@ -167,7 +167,7 @@
             <div class="col-lg-4 centered">
                 <br>
                 <p><img class="img img-circle" src="assets/img/team/team03.jpg" width="60px" height="60px"></p>
-                <h4>Michele Lampa</h4>
+                <h4>Jarvis</h4>
                 <h5>Published Aug 28.</h5>
             </div>
             <div class="col-lg-8 blog-content">
