@@ -47,5 +47,8 @@ function get_products($id)
         mysqli_free_result($result);
     }
     $conn->close();
-    return json_encode(array_values($products), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    if(count($products) == 1)
+        return json_encode($products[0], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    else
+        return json_encode(array_values($products), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 }
