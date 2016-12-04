@@ -48,7 +48,7 @@ function get_products($id)
     }
     $conn->close();
     if(count($products) == 1){
-        return json_encode(array('id' => 1, 'name' => 'Painting1', 'quantity' => 25, 'image_url' => 'http://geekbabu.com/assets/img/gallery1.jpg', 'price' => 200, 'description' => 'First Painting'), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+        return json_encode($products[1], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
     }
     else
         return json_encode(array_values($products), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
