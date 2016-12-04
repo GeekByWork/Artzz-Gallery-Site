@@ -48,7 +48,7 @@ function get_products($id)
     }
     $conn->close();
     if(count($products) == 1){
-        print array_values($products[0]);
+        print array_values($products[1]);
         return json_encode(array_values($products[0]), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
     }
     else
